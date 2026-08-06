@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  overscroll-behavior: none;
+  height: 100%;
+}
+
+body {
+    background-color: #f7f3f0;
+    font-family: Lora, serif;
+    font-style: italic;
+    min-height: 100vh;
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+#envelope-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.card-container {
+    width: 100%;
+    display: block;
+    position: relative;
+    max-width: 100%;
+    padding: 0 6%;
+}
+
+.card-rsvp img{
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+.parallax-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.parallax-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+}
+
+#layer-sombras {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#layer-sombras img {
+    width: 100%;
+    height: auto;
+    will-change: transform;
+}
+
+#layer-petalos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#layer-petalos img {
+    width: 100%;
+    height: auto;
+    will-change: transform;
+    isolation: isolate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#envelope-img {
+    width: 60%;
+    max-width: 380px;
+    display: block;
+    animation: pulse 1.5s ease-in-out infinite;
+    filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.3));
+}
+
+#tap-hint {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #293731;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+#invitation-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.8s ease,opacity 0.8s ease;
+}
+
+#invitation-content.revealed {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#card-decorativo {
+    padding: 0;
+    width: 100%;
+}
+
+#card-decorativo img {
+    width: 100%;
+}
+
+.map-link {
+    position: absolute;
+    display: block;
+    background-color: transparent;
+}
+
+#link-ceremonia {
+    bottom: 27%;
+    left: 20%;
+    width: 60%;
+    height: 5%;
+}
+
+#link-recepcion {
+    bottom: 38%;
+    left: 20%;
+    width: 65%;
+    height: 20%;
+}
+
+#link-recepcion-carta {
+    bottom: 13%;
+    left: 30%;
+    width: 40%;
+    height: 5%;
+}
+
+#link-rsvp {
+  bottom: 45%;
+  left: 30%;
+  width: 40%;
+  height: 10%;
+}
+
+#countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0;
+  width: 100%;
+}
+
+#countdown-top {
+  display: flex;
+  justify-content: center;
+}
+
+#countdown-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 10px;
+}
+
+#days {
+  font-size: 80px;    /* días más grandes */
+}
+
+#hours, #minutes, #seconds {
+  font-size: 48px;    /* horas, minutos y segundos más pequeños */
+}
+
+.separator {
+  font-size: 32px;    /* igual que horas/minutos/segundos */
+  color: #3a3a3a;
+  font-style: normal;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.countdown-item p {
+  font-size: 10px;        /* letras pequeñas */
+  color: #3a3a3a;
+  letter-spacing: 2px;
+  font-style: normal;
+  text-align: center;     /* centradas */
+  width: 100%;
+  margin-top: 0px;
+}

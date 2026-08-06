@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable=no">
+    <title>Invitacion de Boda</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!--Capa parallax: sombras hojas-->
+    <div class="parallax-layer" id="layer-sombras">
+        <img src="assets/sombra_hojas.png" alt="">
+    </div>
+    <div id="layer-petalos">
+        <img src="assets/petalos.png" alt="">
+    </div>
+
+    <!--Esto es lo primero que ve la persona-->
+    <div id="envelope-screen">
+        <img src="assets/sobre_cerrado.png" alt="sobre de invitacion" id="envelope-img">
+        <p id="tap-hint">Toca para abrir</p>
+    </div>
+
+    <div id="invitation-content">
+        <!-- Aqui va todo la informacion de la boda-->
+         <div class="card-container">
+            <img src="assets/sobre_abierto.png" alt="SobreAbierto">
+            </div>
+
+         <div class="card-container">
+            <img src="assets/carta.png" alt="Invitacion">
+            <a href="https://www.google.com/maps/place/John+Paul+II+Parish/@3.3762021,-76.5183047,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a111c16d3339:0x5d6c9b36d84ed4ab!8m2!3d3.3762021!4d-76.5183047!16s%2Fg%2F11c74_06ms?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+               target="_blank"
+               class="map-link"
+               id="link-ceremonia">
+            </a>
+            <a href="https://www.google.com/maps/place/Casa+Mukira/@3.3422457,-76.5907626,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a3001177b68d:0xc7dd2ce12a2472ce!8m2!3d3.3422457!4d-76.5907626!16s%2Fg%2F11z1wkcw6w?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                class="map-link"
+                id="link-recepcion-carta">
+            </a>
+         </div>
+
+         <div class="card-container">
+            <img src="assets/tarjeta.png" alt="Recepcion">
+            <a href="https://www.google.com/maps/place/Casa+Mukira/@3.3422457,-76.5907626,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a3001177b68d:0xc7dd2ce12a2472ce!8m2!3d3.3422457!4d-76.5907626!16s%2Fg%2F11z1wkcw6w?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                class="map-link"
+                id="link-recepcion">
+            </a>
+         </div>
+
+         <div class="card-container card-rsvp">
+            <img src="assets/rsvp.png" alt="RSVP">
+            <a href="https://wa.me/qr/5KDK5QABLZY7O1"
+                target="_blank"
+                class="map-link"
+                id="link-rsvp">
+            </a>
+         </div>
+
+         <div class="card-container">
+            <img src="assets/color.png" alt="Tarjetacolor">
+            </div>
+
+        <div id="countdown">
+            <div id="countdown-top">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <p>DÍAS</p>
+                </div>
+            </div>
+            <div id="countdown-bottom">
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <p>HORAS</p>
+                </div>
+                <span class="separator">:</span>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <p>MINUTOS</p>
+                </div>
+                <span class="separator">:</span>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <p>SEGUNDOS</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="card-container" id="card-decorativo">
+            <img src="assets/endcard.png" alt="">
+         </div>
+
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
