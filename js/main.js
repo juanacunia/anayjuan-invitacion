@@ -36,7 +36,7 @@ window.addEventListener('scroll', function() {
     layerPetalos.querySelector('img').style.transform = `translateY(-${scrollY * 0.5}px)`;
 });
 
-const weddingDate = new Date('2026-11-21T16:00:00Z');
+const weddingDate = new Date('2026-11-21T17:00:00-04:00');
 
 function updateCountdown() {
   const now = new Date();
